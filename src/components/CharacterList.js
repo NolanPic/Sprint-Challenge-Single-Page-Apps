@@ -4,6 +4,12 @@ import CharacterCard from './CharacterCard';
 import SearchForm from './SearchForm';
 import styled from 'styled-components';
 
+const StyledCharacterList = styled.section`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
@@ -27,12 +33,6 @@ export default function CharacterList() {
       return c.name.toLowerCase().includes(search.toLowerCase());
     }));
   };
-
-  const StyledCharacterList = styled.section`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  `;
 
   return (
     <>
