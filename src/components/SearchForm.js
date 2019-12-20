@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import styled from 'styled-components';
+import { colors } from '../styles';
 
 export default function SearchForm(props) {
 
@@ -14,9 +16,21 @@ export default function SearchForm(props) {
     e.preventDefault();
     onSearch(search);
   };
+
+  const StyledSearch = styled.section`
+    input {
+      width: 100%;
+      height: 4rem;
+      font-size: 2.5rem;
+      padding-left: 25px;
+      background-color: ${colors.offWhite}
+      border: 0;
+      margin: 2.5rem 0;
+    }
+  `;
  
   return (
-    <section className="search-form">
+    <StyledSearch>
      <form onSubmit={doSearch}>
       <input
         type="text"
@@ -25,6 +39,6 @@ export default function SearchForm(props) {
         onChange={updateSearchTerm}
       />
      </form>
-    </section>
+    </StyledSearch>
   );
 }

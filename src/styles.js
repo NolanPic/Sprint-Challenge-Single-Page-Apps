@@ -6,3 +6,7 @@ export const colors = {
     lightRed: '#5c4547',
     offWhite: '#b9d0c1'
 };
+
+export default {
+    mainBorder: `10px solid ${colors.darkRed}`
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
-import { colors } from '../styles';
+import styles, { colors } from '../styles';
 
 export default function Header() {
 
@@ -10,7 +10,7 @@ export default function Header() {
       display: flex;
       background-color: ${colors.lightRed};
       padding: 1rem 0;
-      border: 10px solid ${colors.darkRed};
+      border: ${styles.mainBorder};
       
       a {
         font-size: 2.5rem;
