@@ -26,7 +26,7 @@ export default function CharacterList() {
       })
       .catch(err => console.warn(err));
 
-  }, []);
+  }, []); // did not need a dependencies array
 
   const filterCharacters = search => {
     setFilteredCharacters(characters.filter(c => {
