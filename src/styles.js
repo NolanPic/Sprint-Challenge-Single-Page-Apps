@@ -34,6 +34,12 @@ export const CardBody = styled.div`
   ul {
     padding: 0;
   }
+
+  a {
+      text-decoration: none;
+      color: ${colors.lightGreen};
+      font-size: 2rem;
+  }
 `;
 
 

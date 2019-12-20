@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, CardImg, CardBody } from '../styles';
+import { Link } from 'react-router-dom';
 
 
 export default function CharacterCard({ character }) {
-  const { name, image, species, status, location } = character;
+  const { id, name, image, species, status, location } = character;
   return (
     <Card>
       <CardImg src={image} />
@@ -14,6 +15,7 @@ export default function CharacterCard({ character }) {
           <li>Status: {status}</li>
           <li>Location: {location.name}</li>
         </ul>
+        <Link to={`/characters/${id}`}>View &gt;</Link>
       </CardBody>
     </Card>
   );

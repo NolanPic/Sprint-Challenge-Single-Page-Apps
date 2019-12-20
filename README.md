@@ -25,7 +25,7 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ]  Explain benefit(s) using `client-side routing`?
+- [x]  Explain benefit(s) using `client-side routing`?
 
 > Answer: Client-side routing allows for faster, more responsive web applications. Instead of traditional server-side routing, where the browser must request an entirely new webpage, client-side routing allows for quickly swapping out pieces of UI without requesting an entire new page.
 
@@ -107,7 +107,7 @@ Complete search component to your list views.
 - [ ]  Animate page transition and/or card loading.
 - [ ]  Persist search form field(s) by using the custom hook `useLocalStorage`.
 - [ ]  Add error handling for all async (axios/AJAX) calls. (Including some styled UI.)
-- [ ]  Add a "details view" and route to show more details for each type of record. (Hint: Look into route parameters or nested routes.)
+- [x]  Add a "details view" and route to show more details for each type of record. (Hint: Look into route parameters or nested routes.)
     - [ ]  Similar to the "details view" now with a UI twist: use a [modal](https://react.semantic-ui.com/modules/modal/#variations-size) component to show item view. (If you can, build [modal with routes](https://codesandbox.io/s/react-router-modal-gallery-classes-example-z98l5).)
 - [ ]  Add [paging support](https://react.semantic-ui.com/addons/pagination/#types-pagination) (next/previous links.)
 - [ ]  Refactor to use as few Components as possible - while still readable to a React Dev. (Hint: research these patterns: HoC, render props, FaaC.)
