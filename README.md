@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client-side routing allows for faster, more responsive web applications. Instead of traditional server-side routing, where the browser must request an entirely new webpage, client-side routing allows for quickly swapping out pieces of UI without requesting an entire new page.
 
 ## Project Set Up
 
