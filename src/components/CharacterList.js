@@ -6,6 +6,7 @@ import SearchForm from './SearchForm';
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -14,16 +15,23 @@ export default function CharacterList() {
       .then(res => {
         console.log('res', res);
         setCharacters(res.data.results);
+        setFilteredCharacters(res.data.results);
       })
       .catch(err => console.warn(err));
 
   }, []);
 
+  const filterCharacters = search => {
+    setFilteredCharacters(characters.filter(c => {
+      return c.name.toLowerCase().includes(search.toLowerCase());
+    }));
+  };
+
   return (
     <>
-      <SearchForm />
+      <SearchForm onSearch={filterCharacters} />
       <section className="character-list">
-        {characters.length && characters.map(c => <CharacterCard key={c.id} character={c} />)}
+        {filteredCharacters.length && filteredCharacters.map(c => <CharacterCard key={c.id} character={c} />)}
       </section>
     </>
   );

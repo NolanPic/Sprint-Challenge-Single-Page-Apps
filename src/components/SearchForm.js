@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 
-export default function SearchForm() {
+export default function SearchForm(props) {
+
+  const { onSearch } = props;
 
   const [search, setSearch] = useState('');
 
-  const updateSearch = e => {
+  const updateSearchTerm = e => {
     setSearch(e.target.value);
+  };
+
+  const doSearch = e => {
+    e.preventDefault();
+    onSearch(search);
   };
  
   return (
     <section className="search-form">
-     <form>
+     <form onSubmit={doSearch}>
       <input
         type="text"
         placeholder="Search"
         value={search}
-        onChange={updateSearch}
+        onChange={updateSearchTerm}
       />
      </form>
     </section>
