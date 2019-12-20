@@ -13,6 +13,7 @@ export default function Header() {
       border: 10px solid ${colors.darkRed};
       
       a {
+        font-size: 2.5rem;
         padding-left: 2rem;
         text-decoration: none;
         color: ${colors.offWhite};
