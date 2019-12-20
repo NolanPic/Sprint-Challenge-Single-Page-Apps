@@ -1,28 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
-import styles, { colors } from '../styles';
-
-const Card = styled.div`
-  border: ${styles.faintGreenBorder};
-  width: 30%;
-  margin-bottom: 4rem;
-`;
-
-const CardImg = styled.img`
-  max-width: 100%;
-`;
-
-const CardBody = styled.div`
-  padding: 4rem;
-
-  h3 {
-    color: ${colors.lightGreen}
-  }
-
-  ul {
-    padding: 0;
-  }
-`;
+import { Card, CardImg, CardBody } from '../styles';
 
 
 export default function CharacterCard({ character }) {
