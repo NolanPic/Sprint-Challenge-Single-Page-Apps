@@ -35,7 +35,7 @@ export default function SearchForm(props) {
      <form onSubmit={doSearch}>
       <input
         type="text"
-        placeholder="Search"
+        placeholder="'Enter' to filter"
         value={search}
         onChange={updateSearchTerm}
       />
