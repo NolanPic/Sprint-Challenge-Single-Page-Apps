@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
 import SearchForm from './SearchForm';
+import styled from 'styled-components';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -27,12 +28,18 @@ export default function CharacterList() {
     }));
   };
 
+  const StyledCharacterList = styled.section`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  `;
+
   return (
     <>
       <SearchForm onSearch={filterCharacters} />
-      <section className="character-list">
+      <StyledCharacterList>
         {filteredCharacters.length && filteredCharacters.map(c => <CharacterCard key={c.id} character={c} />)}
-      </section>
+      </StyledCharacterList>
     </>
   );
 }
